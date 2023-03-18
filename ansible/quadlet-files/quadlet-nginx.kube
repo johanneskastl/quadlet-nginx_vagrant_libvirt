@@ -1,0 +1,10 @@
+[Install]
+WantedBy=default.target
+
+[Kube]
+# Point to the yaml file in the same directory
+Yaml=quadlet-nginx.yml
+# Use the quadlet-nginx network
+Network=quadlet-nginx.network
+# Nginx Port
+PublishPort=8080:80
