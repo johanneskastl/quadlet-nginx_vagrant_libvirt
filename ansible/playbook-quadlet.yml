@@ -1,9 +1,10 @@
 - name: Setup quadlet demo machine
   hosts: all
   become: true
+
   tasks:
 
-  - set_fact:
+  - ansible.builtin.set_fact:
       repository_arch: "{{ ansible_architecture if ansible_architecture == 'x86_64' else 'aarch64'}}"
 
   - name: Add the Kubernetes YUM repo
